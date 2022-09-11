@@ -1,8 +1,13 @@
 const mongoose=require('mongoose')
 
-const postSchema= new Schema({
+const postSchema= new mongoose.Schema({
+    /*user:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'user'
+    },*/
     title:{
         type: String,
+        unique: true,
         required: true
     },
     description:{
@@ -21,6 +26,10 @@ const postSchema= new Schema({
         type: String,
         required: true
     },
+    date:{
+        type: Date,
+        default: Date.now
+    }
     /*
         images
     */
