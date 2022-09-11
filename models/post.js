@@ -1,10 +1,10 @@
 const mongoose=require('mongoose')
 
 const postSchema= new mongoose.Schema({
-    /*user:{
+    user:{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'user'
-    },*/
+    },
     title:{
         type: String,
         unique: true,
